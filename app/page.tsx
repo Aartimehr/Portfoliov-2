@@ -210,7 +210,7 @@ export default function Home() {
             "Next.js",
             "Node.js",
             "Express.js",
-            "MongoDB",
+            "PostgreSQL",
             "MySQL",
             "Git",
             "GitHub",
