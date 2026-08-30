@@ -32,8 +32,8 @@ export default function Contact() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#080a12",
-        color: "#f8fafc",
+        background: "#FFFDF9",
+        color: "#2D2424",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",

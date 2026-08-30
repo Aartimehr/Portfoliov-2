@@ -63,8 +63,8 @@ export default function Blogs() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#080a12",
-        color: "#f8fafc",
+        background: "#FFFDF9",
+        color: "#2D2424",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
@@ -78,7 +78,7 @@ export default function Blogs() {
           width: "400px",
           height: "400px",
           borderRadius: "50%",
-          background: "#6366f1",
+          background: "#2D2424",
           filter: "blur(140px)",
           opacity: 0.12,
           top: "100px",
@@ -120,7 +120,7 @@ export default function Blogs() {
         <Link
           href="/"
           style={{
-            color: "#cbd5e1",
+            color: "#2D2424",
             textDecoration: "none",
             fontSize: "14px",
           }}
@@ -130,7 +130,7 @@ export default function Blogs() {
 
         <span
           style={{
-            color: "#64748b",
+            color: "#2D2424",
             fontSize: "12px",
             letterSpacing: "2px",
           }}
@@ -145,7 +145,7 @@ export default function Blogs() {
         style={{
           maxWidth: "1250px",
           margin: "auto",
-          padding: "110px 0 80px",
+          // padding: "110px 0 80px",
           position: "relative",
           zIndex: 2,
         }}
@@ -155,7 +155,7 @@ export default function Blogs() {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            color: "#a5b4fc",
+            color: "#2D2424",
             fontSize: "13px",
             fontWeight: 600,
             letterSpacing: "1.5px",
@@ -176,36 +176,37 @@ export default function Blogs() {
           Developer Journal
         </div>
 
-        <h1
+        <h2
           style={{
             margin: 0,
             maxWidth: "900px",
-            fontSize: "clamp(55px, 8vw, 100px)",
+            fontSize: "clamp(55px, 8vw, 10px)",
             lineHeight: 0.95,
             letterSpacing: "-5px",
-            fontWeight: 700,
+            fontWeight: 70,
           }}
         >
-          Thoughts,
+          Thoughts,code & 
           <br />
+          Knowledge
           <span
             style={{
-              background:
-                "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
+              // background:
+                // "linear-gradient(100deg, #4A1420, #6B1F2B, #8B3A46)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
             Code & Knowledge.
           </span>
-        </h1>
+        </h2>
 
         <p
           style={{
             maxWidth: "680px",
-            marginTop: "35px",
-            color: "#94a3b8",
-            fontSize: "18px",
+            marginTop: "19px",
+            color: "#2D2424",
+            fontSize: "12px",
             lineHeight: 1.8,
           }}
         >
@@ -239,7 +240,7 @@ export default function Blogs() {
               padding: "32px",
               borderRadius: "22px",
               border: "1px solid rgba(255,255,255,0.08)",
-              background: "rgba(15,18,30,0.72)",
+              background: "#F8F1E7",
               backdropFilter: "blur(15px)",
             }}
           >
@@ -247,7 +248,7 @@ export default function Blogs() {
 
             <div
               style={{
-                color: "#6366f1",
+                color: "#2D2424",
                 fontSize: "13px",
                 fontWeight: 700,
                 letterSpacing: "1px",
@@ -269,7 +270,7 @@ export default function Blogs() {
               >
                 <span
                   style={{
-                    color: "#818cf8",
+                    color: "#2D2424",
                     fontSize: "11px",
                     fontWeight: 700,
                     letterSpacing: "1.5px",
@@ -281,7 +282,7 @@ export default function Blogs() {
 
                 <span
                   style={{
-                    color: "#475569",
+                    color: "#2D2424",
                   }}
                 >
                   •
@@ -289,7 +290,7 @@ export default function Blogs() {
 
                 <span
                   style={{
-                    color: "#64748b",
+                    color: "#2D2424",
                     fontSize: "12px",
                   }}
                 >
@@ -312,7 +313,7 @@ export default function Blogs() {
                 style={{
                   margin: 0,
                   maxWidth: "750px",
-                  color: "#94a3b8",
+                  color: "#2D2424",
                   fontSize: "14px",
                   lineHeight: 1.7,
                 }}
@@ -338,7 +339,7 @@ export default function Blogs() {
                       borderRadius: "7px",
                       background: "rgba(99,102,241,0.08)",
                       border: "1px solid rgba(99,102,241,0.15)",
-                      color: "#c7d2fe",
+                      color: "#2D2424",
                       fontSize: "10px",
                     }}
                   >
@@ -350,7 +351,7 @@ export default function Blogs() {
               <div
                 style={{
                   marginTop: "18px",
-                  color: "#475569",
+                  color: "#2D2424",
                   fontSize: "11px",
                 }}
               >
@@ -370,7 +371,7 @@ export default function Blogs() {
                 alignItems: "center",
                 justifyContent: "center",
                 textDecoration: "none",
-                color: "#a5b4fc",
+                color: "#2D2424",
                 border: "1px solid rgba(255,255,255,0.1)",
                 fontSize: "18px",
               }}
@@ -381,7 +382,7 @@ export default function Blogs() {
         ))}
       </section>
 
-      {/* CTA */}
+      {/* CTA
 
       <section
         style={{
@@ -442,7 +443,7 @@ export default function Blogs() {
         >
           Explore My Projects ↗
         </Link>
-      </section>
+      </section> */}
 
       {/* FOOTER */}
 
@@ -453,7 +454,7 @@ export default function Blogs() {
           padding: "30px 0 40px",
           display: "flex",
           justifyContent: "space-between",
-          color: "#475569",
+          color: "#2D2424",
           fontSize: "12px",
           borderTop: "1px solid rgba(255,255,255,0.07)",
         }}

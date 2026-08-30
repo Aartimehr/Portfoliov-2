@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main
       style={{
-        backgroundColor: "#f8fafc",
-        color: "#0f172a",
+        backgroundColor: "#FFFDF9",
+        color: "#2D2424",
       }}
     >
       {/* HERO / INTRODUCTION */}
@@ -33,7 +34,7 @@ export default function Home() {
             <p
               style={{
                 fontSize: "20px",
-                color: "#6366f1",
+                color: "#8B3A46",
                 fontWeight: "600",
                 marginBottom: "15px",
               }}
@@ -45,6 +46,7 @@ export default function Home() {
               style={{
                 fontSize: "64px",
                 lineHeight: "1.1",
+                color:"#8B3A46",
                 margin: "0 0 15px",
                 fontWeight: "800",
               }}
@@ -56,7 +58,7 @@ export default function Home() {
               style={{
                 fontSize: "32px",
                 margin: "0 0 25px",
-                color: "#334155",
+                color: "#8B3A46",
                 fontWeight: "600",
               }}
             >
@@ -67,7 +69,7 @@ export default function Home() {
               style={{
                 fontSize: "18px",
                 lineHeight: "1.8",
-                color: "#64748b",
+                color: "#8B3A46",
                 maxWidth: "650px",
                 marginBottom: "35px",
               }}
@@ -88,9 +90,10 @@ export default function Home() {
               <Link
                 href="/projects"
                 style={{
-                  backgroundColor: "#6366f1",
-                  color: "#ffffff",
-                  padding: "14px 28px",
+                  // backgroundColor: "#6366f1",
+                  border: "2px solid #4A1420",
+                  color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
+                  padding: "12px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
@@ -103,8 +106,8 @@ export default function Home() {
               <Link
                 href="/contact"
                 style={{
-                  border: "2px solid #6366f1",
-                  color: "#6366f1",
+                  border: "2px solid #4A1420",
+                  color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
                   padding: "12px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
@@ -118,28 +121,27 @@ export default function Home() {
           </div>
 
           {/* Right side */}
-          <div
-            style={{
-              width: "300px",
-              height: "300px",
-              borderRadius: "50%",
-              backgroundColor: "#e0e7ff",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexShrink: 0,
-            }}
-          >
-            <span
-              style={{
-                fontSize: "80px",
-                fontWeight: "800",
-                color: "#6366f1",
-              }}
-            >
-              AM
-            </span>
-          </div>
+        <div
+  style={{
+    width: "300px",
+    height: "300px",
+    borderRadius: "50%",
+    overflow: "hidden",
+    flexShrink: 0,
+  }}
+>
+  <Image
+    src="/profileimage.jpeg"
+    alt="Aarti Mehra"
+    width={300}
+    height={300}
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    }}
+  />
+</div>
         </div>
       </section>
 
@@ -300,12 +302,12 @@ export default function Home() {
         </p>
       </section>
 
-      {/* CONTACT */}
+      {/* CONTACT
       <section
         style={{
           padding: "100px 60px",
-          backgroundColor: "#0f172a",
-          color: "#ffffff",
+          backgroundColor: "#F8F1E7",
+          color: "#6B1F2B",
           textAlign: "center",
         }}
       >
@@ -321,7 +323,7 @@ export default function Home() {
         <p
           style={{
             fontSize: "18px",
-            color: "#cbd5e1",
+            color: "#6B1F2B",
             marginBottom: "30px",
           }}
         >
@@ -332,8 +334,8 @@ export default function Home() {
           href="/contact"
           style={{
             display: "inline-block",
-            backgroundColor: "#6366f1",
-            color: "#ffffff",
+            backgroundColor: "#F8F1E7",
+            color: "#6B1F2B",
             padding: "14px 30px",
             borderRadius: "8px",
             textDecoration: "none",
@@ -342,7 +344,7 @@ export default function Home() {
         >
           Contact Me
         </Link>
-      </section>
+      </section> */}
     </main>
   );
 }

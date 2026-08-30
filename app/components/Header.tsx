@@ -6,7 +6,7 @@ export default function Header() {
       style={{
         width: "100%",
         padding: "20px 60px",
-        backgroundColor: "#0f172a",
+        backgroundColor: "#F8F1E7",
         color: "#ffffff",
         position: "sticky",
         top: 0,
@@ -27,13 +27,13 @@ export default function Header() {
         <Link
           href="/"
           style={{
-            color: "#ffffff",
+            color: "#2D2424",
             textDecoration: "none",
             fontSize: "24px",
             fontWeight: "700",
           }}
         >
-          Aarti.
+          Aarti's Portfolio
         </Link>
 
         {/* Navigation */}
@@ -47,7 +47,7 @@ export default function Header() {
           <Link
             href="/"
             style={{
-              color: "#ffffff",
+              color: "#2D2424",
               textDecoration: "none",
               fontSize: "16px",
             }}
@@ -58,7 +58,7 @@ export default function Header() {
           <Link
             href="/projects"
             style={{
-              color: "#ffffff",
+              color: "#2D2424",
               textDecoration: "none",
               fontSize: "16px",
             }}
@@ -69,32 +69,42 @@ export default function Header() {
           <Link
             href="/education"
             style={{
-              color: "#ffffff",
+              color: "#2D2424",
               textDecoration: "none",
               fontSize: "16px",
             }}
           >
             My Education
           </Link>
-
+          <Link
+           href="/freelance-projects"
+              style={{
+                color: "#2D2424",
+                textDecoration:"none",
+                fontSize:"16px",
+              }}
+              >
+          Freelance Projects
+           </Link>
           <Link
             href="/blogs"
             style={{
-              color: "#ffffff",
+              color: "#2D2424",
               textDecoration: "none",
               fontSize: "16px",
             }}
           >
+
             My Blogs
           </Link>
 
           <Link
             href="/contact"
             style={{
-              color: "#ffffff",
+              color: "#2D2424",
               textDecoration: "none",
               fontSize: "16px",
-            }}
+            }}  
           >
             Contact
           </Link>

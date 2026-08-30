@@ -47,8 +47,8 @@ export default function Education() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#080a12",
-        color: "#f8fafc",
+        background: "#FFFDF9",
+        color: "#2D2424",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
@@ -104,7 +104,7 @@ export default function Education() {
         <Link
           href="/"
           style={{
-            color: "#cbd5e1",
+            color: "#2D2424",
             textDecoration: "none",
             fontSize: "14px",
           }}
@@ -114,7 +114,7 @@ export default function Education() {
 
         <span
           style={{
-            color: "#64748b",
+            color: "#2D2424",
             fontSize: "12px",
             letterSpacing: "2px",
           }}
@@ -129,7 +129,7 @@ export default function Education() {
         style={{
           maxWidth: "1250px",
           margin: "auto",
-          padding: "110px 0 80px",
+          // padding: "110px 0 80px",
           position: "relative",
           zIndex: 2,
         }}
@@ -139,7 +139,7 @@ export default function Education() {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            color: "#a5b4fc",
+            color: "#2D2424",
             fontSize: "13px",
             fontWeight: 600,
             letterSpacing: "1.5px",
@@ -160,35 +160,34 @@ export default function Education() {
           My Academic Journey
         </div>
 
-        <h1
+        <h2
           style={{
             margin: 0,
             maxWidth: "850px",
-            fontSize: "clamp(55px, 8vw, 100px)",
+            fontSize: "clamp(55px, 8vw, 10px)",
             lineHeight: 0.95,
             letterSpacing: "-5px",
             fontWeight: 700,
           }}
         >
-          Education &
+          Education & Growth
           <span
             style={{
-              background:
-                "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
+              // background:
+              //   "#4A1420",
               WebkitBackgroundClip: "text",
+              color : "#4A1420",
               WebkitTextFillColor: "transparent",
             }}
           >
-            {" "}
-            Growth.
           </span>
-        </h1>
+        </h2>
 
         <p
           style={{
             maxWidth: "650px",
             marginTop: "35px",
-            color: "#94a3b8",
+            color: "#2D2424",
             fontSize: "18px",
             lineHeight: 1.8,
           }}
@@ -231,7 +230,7 @@ export default function Education() {
             style={{
               height: "1px",
               flex: 1,
-              background: "rgba(255,255,255,0.08)",
+              background: "#F8F1E7",
             }}
           />
         </div>
@@ -251,7 +250,7 @@ export default function Education() {
                 gridTemplateColumns: "180px 1fr",
                 border: "1px solid rgba(255,255,255,0.09)",
                 borderRadius: "24px",
-                background: "rgba(15,18,30,0.72)",
+                background: "#F8F1E7",
                 backdropFilter: "blur(15px)",
                 overflow: "hidden",
               }}
@@ -269,7 +268,7 @@ export default function Education() {
               >
                 <span
                   style={{
-                    color: "#818cf8",
+                    color: "#6B1F2B",
                     fontSize: "13px",
                     fontWeight: 700,
                     letterSpacing: "1px",
@@ -288,7 +287,7 @@ export default function Education() {
                     justifyContent: "center",
                     background: "rgba(99,102,241,0.1)",
                     border: "1px solid rgba(99,102,241,0.2)",
-                    color: "#a5b4fc",
+                    color: "#6B1F2B",
                     fontSize: "16px",
                   }}
                 >
@@ -305,7 +304,7 @@ export default function Education() {
               >
                 <span
                   style={{
-                    color: "#818cf8",
+                    color: "#2D2424",
                     fontSize: "11px",
                     fontWeight: 700,
                     letterSpacing: "2px",
@@ -327,7 +326,7 @@ export default function Education() {
                 <h4
                   style={{
                     margin: 0,
-                    color: "#e2e8f0",
+                    color: "#2D2424",
                     fontSize: "16px",
                     fontWeight: 500,
                   }}
@@ -338,7 +337,7 @@ export default function Education() {
                 <p
                   style={{
                     margin: "7px 0 20px",
-                    color: "#64748b",
+                    color: "#2D2424",
                     fontSize: "13px",
                   }}
                 >
@@ -348,7 +347,8 @@ export default function Education() {
                 <p
                   style={{
                     maxWidth: "800px",
-                    color: "#94a3b8",
+                    background:"#F8F1E7",
+                    color: "#2D2424",
                     fontSize: "15px",
                     lineHeight: 1.75,
                     marginBottom: "25px",
@@ -383,7 +383,7 @@ export default function Education() {
 
                   <strong
                     style={{
-                      color: "#a5b4fc",
+                      color: "#8B3A46",
                       fontSize: "14px",
                     }}
                   >
@@ -428,7 +428,7 @@ export default function Education() {
             style={{
               height: "1px",
               flex: 1,
-              background: "rgba(255,255,255,0.08)",
+              background: "#F8F1E7",
             }}
           />
         </div>
@@ -447,7 +447,7 @@ export default function Education() {
                 padding: "35px",
                 border: "1px solid rgba(255,255,255,0.09)",
                 borderRadius: "24px",
-                background: "rgba(15,18,30,0.72)",
+                background: "#F8F1E7",
                 backdropFilter: "blur(15px)",
               }}
             >
@@ -461,7 +461,7 @@ export default function Education() {
               >
                 <span
                   style={{
-                    color: "#6366f1",
+                    color: "#8B3A46",
                     fontSize: "12px",
                     fontWeight: 700,
                     letterSpacing: "1px",
@@ -480,7 +480,7 @@ export default function Education() {
                     borderRadius: "12px",
                     background: "rgba(99,102,241,0.1)",
                     border: "1px solid rgba(99,102,241,0.2)",
-                    color: "#a5b4fc",
+                    color: "#8B3A46",
                     fontSize: "18px",
                   }}
                 >
@@ -490,7 +490,7 @@ export default function Education() {
 
               <span
                 style={{
-                  color: "#818cf8",
+                  color: "#8B3A46",
                   fontSize: "11px",
                   fontWeight: 700,
                   letterSpacing: "1.5px",
@@ -512,7 +512,7 @@ export default function Education() {
 
               <p
                 style={{
-                  color: "#94a3b8",
+                  color: "#8B3A46",
                   fontSize: "14px",
                   lineHeight: 1.7,
                   marginBottom: "25px",
@@ -536,7 +536,7 @@ export default function Education() {
                       borderRadius: "7px",
                       background: "rgba(99,102,241,0.08)",
                       border: "1px solid rgba(99,102,241,0.16)",
-                      color: "#c7d2fe",
+                      color: "#8B3A46",
                       fontSize: "11px",
                     }}
                   >
@@ -549,7 +549,7 @@ export default function Education() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA
 
       <section
         style={{
@@ -560,7 +560,7 @@ export default function Education() {
           borderRadius: "30px",
           border: "1px solid rgba(99,102,241,0.25)",
           background:
-            "radial-gradient(circle at 50% 0%, rgba(99,102,241,0.18), transparent 60%), rgba(15,18,30,0.7)",
+            "#8B3A46",
           position: "relative",
           zIndex: 2,
         }}
@@ -609,7 +609,7 @@ export default function Education() {
         >
           View My Projects ↗
         </Link>
-      </section>
+      </section> */}
 
       {/* FOOTER */}
 

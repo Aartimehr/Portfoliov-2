@@ -58,8 +58,8 @@ export default function Projects() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#080a12",
-        color: "#f8fafc",
+        background: "#FFFDF9",
+        color: "#2D2424",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
@@ -81,7 +81,7 @@ export default function Projects() {
         <Link
           href="/"
           style={{
-            color: "#cbd5e1",
+            color: "#2D2424",
             textDecoration: "none",
             fontSize: "14px",
           }}
@@ -91,7 +91,7 @@ export default function Projects() {
 
         <span
           style={{
-            color: "#64748b",
+            color: "#2D2424",
             fontSize: "12px",
             letterSpacing: "2px",
           }}
@@ -100,7 +100,7 @@ export default function Projects() {
         </span>
       </nav>
 
-      {/* HERO */}
+      {/* HERO
 
       <section
         style={{
@@ -127,42 +127,41 @@ export default function Projects() {
               width: "8px",
               height: "8px",
               borderRadius: "50%",
-              background: "#6366f1",
+              background: "#6B1F2B",
               boxShadow: "0 0 15px #6366f1",
             }}
           />
 
           Selected Work
-        </div>
+        </div> */}
 
         <h1
           style={{
             margin: 0,
-            maxWidth: "800px",
-            fontSize: "clamp(55px, 8vw, 105px)",
+            maxWidth: "700px",
+            fontSize: "clamp(10px, 8vw, 50px)",
             lineHeight: 0.95,
             letterSpacing: "-5px",
-            fontWeight: 700,
+            fontWeight: 100,
           }}
         >
-          Things I&apos;ve{" "}
+          Things I&apos;ve{" "}Built.
           <span
             style={{
-              background:
-                "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
+              // background:
+              //   "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            Built.
           </span>
         </h1>
 
         <p
           style={{
             maxWidth: "650px",
-            marginTop: "35px",
-            color: "#94a3b8",
+            marginTop: "px",
+            color: "#2D2424",
             fontSize: "18px",
             lineHeight: 1.8,
           }}
@@ -171,7 +170,7 @@ export default function Projects() {
           frontend engineering and backend development to create useful
           digital experiences.
         </p>
-      </section>
+      {/* </section> */}
 
       {/* PROJECTS */}
 
@@ -180,6 +179,7 @@ export default function Projects() {
           maxWidth: "1250px",
           margin: "auto",
           display: "flex",
+          background:"#6B1F2B",
           flexDirection: "column",
           gap: "22px",
         }}
@@ -202,6 +202,7 @@ export default function Projects() {
             <div
               style={{
                 padding: "35px 25px",
+                background:"#F8F1E7",
                 color: "#6366f1",
                 fontSize: "13px",
                 fontWeight: 700,
@@ -211,12 +212,12 @@ export default function Projects() {
             >
               {project.number}
             </div>
-
             {/* PROJECT CONTENT */}
 
             <div
               style={{
                 padding: "35px 40px",
+                background:"#F8F1E7",
               }}
             >
               <div
@@ -229,7 +230,7 @@ export default function Projects() {
                 <div>
                   <span
                     style={{
-                      color: "#818cf8",
+                      color: "#2D2424",
                       fontSize: "12px",
                       fontWeight: 600,
                       letterSpacing: "1.5px",
@@ -272,7 +273,7 @@ export default function Projects() {
               <p
                 style={{
                   maxWidth: "760px",
-                  color: "#94a3b8",
+                  color: "",
                   lineHeight: 1.75,
                   fontSize: "15px",
                   margin: "22px 0",
@@ -297,7 +298,7 @@ export default function Projects() {
                     style={{
                       padding: "8px 13px",
                       borderRadius: "8px",
-                      background: "rgba(99,102,241,0.08)",
+                      background: "#8B3A46",
                       border: "1px solid rgba(99,102,241,0.18)",
                       color: "#c7d2fe",
                       fontSize: "12px",
@@ -330,7 +331,7 @@ export default function Projects() {
                     textDecoration: "none",
                     fontSize: "13px",
                     fontWeight: 600,
-                    color: "#e2e8f0",
+                    color: "#756666",
                     border: "1px solid rgba(255,255,255,0.12)",
                   }}
                 >
@@ -350,11 +351,8 @@ export default function Projects() {
                     textDecoration: "none",
                     fontSize: "13px",
                     fontWeight: 600,
-                    color: "#fff",
-                    background: "#6366f1",
+                    color: "#756666",
                     border: "1px solid #6366f1",
-                    boxShadow:
-                      "0 10px 35px rgba(99,102,241,0.25)",
                   }}
                 >
                   Live Project ↗
@@ -367,7 +365,7 @@ export default function Projects() {
 
       {/* CTA */}
 
-      <section
+      {/* <section
         style={{
           maxWidth: "1250px",
           margin: "150px auto 100px",
@@ -401,8 +399,8 @@ export default function Projects() {
         >
           Let&apos;s build something{" "}
           <span style={{ color: "#818cf8" }}>meaningful.</span>
-        </h2>
-
+        </h2> */}
+{/* 
         <Link
           href="/contact"
           style={{
@@ -420,8 +418,8 @@ export default function Projects() {
           }}
         >
           Let&apos;s Talk ↗
-        </Link>
-      </section>
+        </Link> */}
+      {/* </section> */}
 
       {/* FOOTER */}
 
