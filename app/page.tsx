@@ -93,7 +93,7 @@ export default function Home() {
                   // backgroundColor: "#6366f1",
                   border: "2px solid #4A1420",
                   color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "12px 28px",
+                  padding: "14px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
@@ -108,7 +108,7 @@ export default function Home() {
                 style={{
                   border: "2px solid #4A1420",
                   color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "12px 28px",
+                  padding: "14px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
