@@ -91,9 +91,9 @@ export default function Home() {
                 href="/projects"
                 style={{
                   // backgroundColor: "#6366f1",
-                  border: "2px solid #4A1420",
+                  border: "1px solid #4A1420",
                   color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "12px 28px",
+                  padding: "20px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
@@ -106,9 +106,9 @@ export default function Home() {
               <Link
                 href="/contact"
                 style={{
-                  border: "2px solid #4A1420",
+                  border: "1px solid #4A1420",
                   color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "12px 28px",
+                  padding: "20px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
