@@ -100,7 +100,7 @@ export default function Home() {
                   fontSize: "16px",
                 }}
               >
-                View My Projects
+                View My Projects 
               </Link>
 
               <Link
