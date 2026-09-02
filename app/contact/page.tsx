@@ -33,7 +33,7 @@ export default function Contact() {
       style={{
         minHeight: "100vh",
         background: "#FFFDF9",
-        color: "#2D2424",
+        color: "#F8F1E7",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
@@ -124,7 +124,7 @@ export default function Contact() {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            color: "#a5b4fc",
+            color: "#F8F1E7",
             fontSize: "13px",
             fontWeight: 600,
             letterSpacing: "1.5px",
