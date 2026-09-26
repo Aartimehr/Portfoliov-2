@@ -58,7 +58,7 @@ export default function FreelanceProjects() {
           gap: "30px",
         }}
       >
-        {/* Project 1 */}
+        {/* Project 1: GlobalWorkforce */}
         <div
           style={{
             backgroundColor: "#ffffff",
@@ -67,16 +67,6 @@ export default function FreelanceProjects() {
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
           }}
         >
-          {/* <img
-            src="/project1.jpg"
-            alt="Project 1"
-            style={{
-              width: "100%",
-              height: "220px",
-              objectFit: "cover",
-            }}
-          /> */}
-
           <div style={{ padding: "25px" }}>
             <h3
               style={{
@@ -85,7 +75,7 @@ export default function FreelanceProjects() {
                 color: "#0f172a",
               }}
             >
-              Business Website
+              GlobalWorkforce
             </h3>
 
             <p
@@ -95,8 +85,63 @@ export default function FreelanceProjects() {
                 marginBottom: "15px",
               }}
             >
-              A modern responsive website designed for a growing
-              business to showcase its services and attract customers.
+              A comprehensive digital web platform developed for an international recruitment business. Built with a robust backend and hosted database to streamline workforce placement and manage client data securely.
+            </p>
+
+            <p
+              style={{
+                color: "#8B3A46",
+                fontSize: "14px",
+                fontWeight: "600",
+                marginBottom: "20px",
+              }}
+            >
+              React • Node.js • Express • MySQL
+            </p>
+
+            <a
+              href="https://GlobalWorkforce.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "#8B3A46",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+            >
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        {/* Project 2: CurlyCuts */}
+        <div
+          style={{
+            backgroundColor: "#ffffff",
+            borderRadius: "15px",
+            overflow: "hidden",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
+          }}
+        >
+          <div style={{ padding: "25px" }}>
+            <h3
+              style={{
+                fontSize: "24px",
+                marginBottom: "12px",
+                color: "#0f172a",
+              }}
+            >
+              CurvyCuts
+            </h3>
+
+            <p
+              style={{
+                color: "#64748b",
+                lineHeight: "1.6",
+                marginBottom: "15px",
+              }}
+            >
+              A modern, responsive business website designed for a salon to showcase its specialized haircare services, attract new customers, and provide a polished digital experience.
             </p>
 
             <p
@@ -111,7 +156,9 @@ export default function FreelanceProjects() {
             </p>
 
             <a
-              href="#"
+              href="https://curlycuts.in"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 color: "#8B3A46",
                 textDecoration: "none",
@@ -123,90 +170,31 @@ export default function FreelanceProjects() {
           </div>
         </div>
 
-        {/* Project 2 */}
+        {/* Project 3: Prime Care */}
         <div
           style={{
             backgroundColor: "#ffffff",
             borderRadius: "15px",
             overflow: "hidden",
             boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
+            border: "1px solid rgba(139, 58, 70, 0.2)",
+            position: "relative",
           }}
         >
-          {/* <img
-            src="/project2.jpg"
-            alt="Project 2"
-            style={{
-              width: "100%",
-              height: "220px",
-              objectFit: "cover",
-            }}
-          /> */}
-
-          <div style={{ padding: "25px" }}>
-            <h3
-              style={{
-                fontSize: "24px",
-                marginBottom: "12px",
-                color: "#0f172a",
-              }}
-            >
-              E-Commerce Website
-            </h3>
-
-            <p
-              style={{
-                color: "#64748b",
-                lineHeight: "1.6",
-                marginBottom: "15px",
-              }}
-            >
-              An e-commerce platform with product listings,
-              categories and a clean shopping experience.
-            </p>
-
-            <p
-              style={{
-                color: "#8B3A46",
-                fontSize: "14px",
-                fontWeight: "600",
-                marginBottom: "20px",
-              }}
-            >
-              React • Node.js • MongoDB
-            </p>
-
-            <a
-              href="#"
-              style={{
-                color: "#8B3A46",
-                textDecoration: "none",
-                fontWeight: "600",
-              }}
-            >
-              View Project →
-            </a>
+          {/* Optional Ongoing Badge */}
+          <div style={{
+            position: "absolute",
+            top: "20px",
+            right: "20px",
+            backgroundColor: "#F8F1E7",
+            color: "#8B3A46",
+            padding: "4px 10px",
+            borderRadius: "20px",
+            fontSize: "12px",
+            fontWeight: "bold"
+          }}>
+            Ongoing
           </div>
-        </div>
-
-        {/* Project 3 */}
-        <div
-          style={{
-            backgroundColor: "#ffffff",
-            borderRadius: "15px",
-            overflow: "hidden",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
-          }}
-        >
-          {/* <img
-            src="/project3.jpg"
-            alt="Project 3"
-            style={{
-              width: "100%",
-              height: "220px",
-              objectFit: "cover",
-            }}
-          /> */}
-
           <div style={{ padding: "25px" }}>
             <h3
               style={{
@@ -215,7 +203,7 @@ export default function FreelanceProjects() {
                 color: "#0f172a",
               }}
             >
-              Professional Portfolio
+              Prime Care
             </h3>
 
             <p
@@ -225,8 +213,7 @@ export default function FreelanceProjects() {
                 marginBottom: "15px",
               }}
             >
-              A professional portfolio website created to showcase
-              a client's skills, work and professional journey.
+              An ongoing digital presence developed for a healthcare and physiotherapy clinic, focused on highlighting specialized care services, patient engagement, and practice information.
             </p>
 
             <p
@@ -237,11 +224,13 @@ export default function FreelanceProjects() {
                 marginBottom: "20px",
               }}
             >
-              Next.js • TypeScript • Tailwind
+              React • Next.js • Tailwind
             </p>
 
             <a
-              href="#"
+              href="https://prime-care-theta.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 color: "#8B3A46",
                 textDecoration: "none",
@@ -265,7 +254,6 @@ export default function FreelanceProjects() {
           href="/freelance-projects"
           style={{
             display: "inline-block",
-            // backgroundColor: "#6366f1",
             color: "#8B3A46",
             padding: "14px 30px",
             border: "2px solid #4A1420",

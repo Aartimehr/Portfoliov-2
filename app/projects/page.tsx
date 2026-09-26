@@ -1,59 +1,106 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
-const projects = [
-  {
-    number: "01",
-    title: "CricFolio",
-    category: "Sports Platform",
-    description:
-      "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
-    skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
-    github: "https://github.com/yourusername/cricfolio",
-    live: "https://cricfolio.vercel.app",
-  },
-  {
-    number: "02",
-    title: "Cube Telemetry",
-    category: "Data & Analytics",
-    description:
-      "A telemetry dashboard that collects, processes and visualizes data through a clean and responsive interface for monitoring important metrics.",
-    skills: ["Node.js", "Express", "MongoDB", "React", "REST API"],
-    github: "https://github.com/yourusername/cube-telemetry",
-    live: "https://cube-telemetry.vercel.app",
-  },
-  {
-    number: "03",
-    title: "Aarnamgati",
-    category: "Vehicle Tracking",
-    description:
-      "A modern vehicle tracking platform focused on providing users with a simple interface to monitor vehicle information and movement.",
-    skills: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    github: "https://github.com/yourusername/aarnamgati",
-    live: "https://aarnamgati.vercel.app",
-  },
-  {
-    number: "04",
-    title: "TechByus",
-    category: "Business Website",
-    description:
-      "A professional digital presence for a technology business offering website development and digital solutions to businesses and startups.",
-    skills: ["Next.js", "React", "CSS", "JavaScript", "SEO"],
-    github: "https://github.com/yourusername/techbyus",
-    live: "https://techhbyus.com",
-  },
-  {
-    number: "05",
-    title: "Smart Calculator",
-    category: "Productivity Tool",
-    description:
-      "A clean calculator application featuring calculation history, responsive interactions and a polished user experience.",
-    skills: ["React", "JavaScript", "CSS", "Local Storage"],
-    github: "https://github.com/yourusername/smart-calculator",
-    live: "https://smart-calculator.vercel.app",
-  },
-];
+const projectsData = {
+  graduate: [
+    {
+      number: "01",
+      title: "CricFolio",
+      category: "Sports Platform",
+      description:
+        "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
+      skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
+      github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
+      live: "https://cricket-gules.vercel.app/",
+    },
+    {
+      number: "02",
+      title: "Task Management System",
+      category: "Full Stack Development",
+      description:
+        "*Task Management System A full-stack task management application built with the node.js,react.js and using MySQL. This application allows users to register, log in, and manage their daily tasks through a clean, responsive dashboard",
+      skills: ["Node.js", "Express", "React", "REST API"],
+      github: "https://github.com/Aartimehr/TaskManagementSystem",
+      // live: "https://cube-telemetry.vercel.app",
+    },
+
+    // {
+    //   number: "03",
+    //   title: "Aarnamgati",
+    //   category: "Vehicle Tracking",
+    //   description:
+    //     "A modern vehicle tracking platform focused on providing users with a simple interface to monitor vehicle information and movement.",
+    //   skills: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+    //   github: "https://github.com/yourusername/aarnamgati",
+    //   live: "https://aarnamgati.vercel.app",
+    // },
+    // {
+    //   number: "04",
+    //   title: "Smart Calculator",
+    //   category: "Productivity Tool",
+    //   description:
+    //     "A clean calculator application featuring calculation history, responsive interactions and a polished user experience.",
+    //   skills: ["React", "JavaScript", "CSS", "Local Storage"],
+    //   github: "https://github.com/yourusername/smart-calculator",
+    //   live: "https://smart-calculator.vercel.app",
+    // },
+  ],
+  // afterGraduation: [
+  //   {
+  //     number: "01",
+  //     title: "Techhbyus",
+  //     category: "Sports Platform",
+  //     description:
+  //       "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
+  //     skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
+  //     github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
+  //     live: "https://cricket-gules.vercel.app/",
+  //   },
+  //   {
+  //     number: "01",
+  //     title: "CricFolio",
+  //     category: "Sports Platform",
+  //     description:
+  //       "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
+  //     skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
+  //     github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
+  //     live: "https://cricket-gules.vercel.app/",
+  //   },
+  // ],
+  ongoing: [
+    {
+      number: "01",
+      title: "TechByus",
+      category: "Business Website",
+      description:
+        "A professional digital presence for a technology business offering website development and digital solutions to businesses and startups.",
+      skills: ["Next.js", "React", "CSS", "JavaScript", "SEO"],
+      github: "https://github.com/yourusername/techbyus",
+      live: "https://techhbyus.com",
+    },
+    {
+      number: "02",
+      title: "Invoice Tracker Micro-SaaS",
+      category: "B2B Platform",
+      description:
+        "A B2B invoice tracking Micro-SaaS platform designed to streamline billing operations, monitor revenue, and simplify business financial workflows.",
+      skills: ["React", "Node.js", "MySQL"],
+      github: "#", // Update with actual link when available
+      live: "#", // Update with actual link when available
+    },
+  ],
+};
 
 export default function Projects() {
+  const [activeTab, setActiveTab] = useState("graduate");
+
+  const tabs = [
+    { id: "graduate", label: "Graduate Projects" },
+    // { id: "afterGraduation", label: "After Graduation Projects" },
+    { id: "ongoing", label: "Ongoing Projects" },
+  ];
+
   return (
     <main
       style={{
@@ -66,7 +113,6 @@ export default function Projects() {
       }}
     >
       {/* NAVBAR */}
-
       <nav
         style={{
           maxWidth: "1250px",
@@ -75,7 +121,7 @@ export default function Projects() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
         }}
       >
         <Link
@@ -94,345 +140,291 @@ export default function Projects() {
             color: "#2D2424",
             fontSize: "12px",
             letterSpacing: "2px",
+            textTransform: "uppercase",
           }}
         >
-          PROJECTS / 05
+          PROJECTS / {activeTab}
         </span>
       </nav>
 
-      {/* HERO
-
+      {/* HEADER */}
       <section
         style={{
           maxWidth: "1250px",
-          margin: "auto",
-          padding: "110px 0 90px",
+          margin: "60px auto 40px",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            color: "#a5b4fc",
-            fontSize: "13px",
-            fontWeight: 600,
-            letterSpacing: "1.5px",
-            textTransform: "uppercase",
-            marginBottom: "25px",
-          }}
-        >
-          <span
-            style={{
-              width: "8px",
-              height: "8px",
-              borderRadius: "50%",
-              background: "#6B1F2B",
-              boxShadow: "0 0 15px #6366f1",
-            }}
-          />
-
-          Selected Work
-        </div> */}
-
         <h1
           style={{
             margin: 0,
             maxWidth: "700px",
-            fontSize: "clamp(10px, 8vw, 50px)",
+            fontSize: "clamp(40px, 8vw, 50px)",
             lineHeight: 0.95,
-            letterSpacing: "-5px",
-            fontWeight: 100,
+            letterSpacing: "-2px",
+            fontWeight: 800,
           }}
         >
-          Things I&apos;ve{" "}Built.
-          <span
-            style={{
-              // background:
-              //   "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-          </span>
+          Things I&apos;ve Built.
         </h1>
 
         <p
           style={{
             maxWidth: "650px",
-            marginTop: "px",
+            marginTop: "20px",
             color: "#2D2424",
             fontSize: "18px",
             lineHeight: 1.8,
           }}
         >
-          A collection of projects where I combine thoughtful design,
-          frontend engineering and backend development to create useful
-          digital experiences.
+          A collection of projects where I combine thoughtful design, frontend
+          engineering, and backend development to create useful digital
+          experiences.
         </p>
-      {/* </section> */}
+      </section>
 
-      {/* PROJECTS */}
+      {/* TABS NAVIGATION */}
+      <section
+        style={{
+          maxWidth: "1250px",
+          margin: "0 auto 40px",
+          display: "flex",
+          gap: "15px",
+          flexWrap: "wrap",
+        }}
+      >
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            style={{
+              padding: "12px 24px",
+              borderRadius: "30px",
+              border: activeTab === tab.id ? "none" : "1px solid #6B1F2B",
+              background: activeTab === tab.id ? "#6B1F2B" : "transparent",
+              color: activeTab === tab.id ? "#FFFDF9" : "#6B1F2B",
+              fontSize: "14px",
+              fontWeight: 600,
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </section>
 
+      {/* PROJECTS LIST */}
       <section
         style={{
           maxWidth: "1250px",
           margin: "auto",
           display: "flex",
-          background:"#6B1F2B",
+          background: "#6B1F2B",
+          padding: "22px",
+          borderRadius: "30px",
           flexDirection: "column",
           gap: "22px",
         }}
       >
-        {projects.map((project) => (
-          <article
-            key={project.number}
+        {projectsData[activeTab].length === 0 ? (
+          <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "90px 1fr",
-              border: "1px solid rgba(255,255,255,0.09)",
-              borderRadius: "24px",
-              background: "rgba(15,18,30,0.72)",
-              backdropFilter: "blur(15px)",
-              overflow: "hidden",
+              padding: "60px 20px",
+              textAlign: "center",
+              color: "#F8F1E7",
+              fontSize: "16px",
             }}
           >
-            {/* PROJECT NUMBER */}
-
-            <div
+            Projects coming soon...
+          </div>
+        ) : (
+          projectsData[activeTab].map((project) => (
+            <article
+              key={project.number}
               style={{
-                padding: "35px 25px",
-                background:"#F8F1E7",
-                color: "#6366f1",
-                fontSize: "13px",
-                fontWeight: 700,
-                letterSpacing: "1px",
-                borderRight: "1px solid rgba(255,255,255,0.07)",
+                display: "grid",
+                gridTemplateColumns: "90px 1fr",
+                border: "1px solid rgba(255,255,255,0.09)",
+                borderRadius: "24px",
+                background: "rgba(15,18,30,0.72)",
+                backdropFilter: "blur(15px)",
+                overflow: "hidden",
               }}
             >
-              {project.number}
-            </div>
-            {/* PROJECT CONTENT */}
-
-            <div
-              style={{
-                padding: "35px 40px",
-                background:"#F8F1E7",
-              }}
-            >
+              {/* PROJECT NUMBER */}
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  justifyContent: "space-between",
+                  padding: "35px 25px",
+                  background: "#F8F1E7",
+                  color: "#6366f1",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                  borderRight: "1px solid rgba(0,0,0,0.07)",
                 }}
               >
-                <div>
+                {project.number}
+              </div>
+
+              {/* PROJECT CONTENT */}
+              <div
+                style={{
+                  padding: "35px 40px",
+                  background: "#F8F1E7",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div>
+                    <span
+                      style={{
+                        color: "#2D2424",
+                        fontSize: "12px",
+                        fontWeight: 600,
+                        letterSpacing: "1.5px",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {project.category}
+                    </span>
+
+                    <h2
+                      style={{
+                        margin: "10px 0 0",
+                        fontSize: "38px",
+                        letterSpacing: "-1.5px",
+                      }}
+                    >
+                      {project.title}
+                    </h2>
+                  </div>
+
                   <span
                     style={{
-                      color: "#2D2424",
-                      fontSize: "12px",
-                      fontWeight: 600,
-                      letterSpacing: "1.5px",
-                      textTransform: "uppercase",
+                      width: "48px",
+                      height: "48px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "1px solid rgba(0,0,0,0.1)",
+                      borderRadius: "50%",
+                      color: "#a5b4fc",
+                      fontSize: "20px",
                     }}
                   >
-                    {project.category}
+                    ↗
                   </span>
-
-                  <h2
-                    style={{
-                      margin: "10px 0 0",
-                      fontSize: "38px",
-                      letterSpacing: "-1.5px",
-                    }}
-                  >
-                    {project.title}
-                  </h2>
                 </div>
 
-                <span
+                {/* DESCRIPTION */}
+                <p
                   style={{
-                    width: "48px",
-                    height: "48px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    borderRadius: "50%",
-                    color: "#a5b4fc",
-                    fontSize: "20px",
+                    maxWidth: "760px",
+                    color: "#2D2424",
+                    lineHeight: 1.75,
+                    fontSize: "15px",
+                    margin: "22px 0",
                   }}
                 >
-                  ↗
-                </span>
-              </div>
+                  {project.description}
+                </p>
 
-              {/* DESCRIPTION */}
+                {/* SKILLS */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "9px",
+                    marginBottom: "28px",
+                  }}
+                >
+                  {project.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      style={{
+                        padding: "8px 13px",
+                        borderRadius: "8px",
+                        background: "#8B3A46",
+                        border: "1px solid rgba(255,255,255,0.18)",
+                        color: "#F8F1E7",
+                        fontSize: "12px",
+                        fontWeight: 500,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
 
-              <p
-                style={{
-                  maxWidth: "760px",
-                  color: "",
-                  lineHeight: 1.75,
-                  fontSize: "15px",
-                  margin: "22px 0",
-                }}
-              >
-                {project.description}
-              </p>
-
-              {/* SKILLS */}
-
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "9px",
-                  marginBottom: "28px",
-                }}
-              >
-                {project.skills.map((skill) => (
-                  <span
-                    key={skill}
+                {/* BUTTONS */}
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "12px",
+                  }}
+                >
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
-                      padding: "8px 13px",
-                      borderRadius: "8px",
-                      background: "#8B3A46",
-                      border: "1px solid rgba(99,102,241,0.18)",
-                      color: "#c7d2fe",
-                      fontSize: "12px",
-                      fontWeight: 500,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      padding: "12px 18px",
+                      borderRadius: "10px",
+                      textDecoration: "none",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      color: "#756666",
+                      border: "1px solid rgba(0,0,0,0.12)",
                     }}
                   >
-                    {skill}
-                  </span>
-                ))}
+                    GitHub ↗
+                  </a>
+
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "12px",
+                      padding: "12px 18px",
+                      borderRadius: "10px",
+                      textDecoration: "none",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      color: "#756666",
+                      border: "1px solid #6366f1",
+                    }}
+                  >
+                    Live Project ↗
+                  </a>
+                </div>
               </div>
-
-              {/* BUTTONS */}
-
-              <div
-                style={{
-                  display: "flex",
-                  gap: "12px",
-                }}
-              >
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "12px 18px",
-                    borderRadius: "10px",
-                    textDecoration: "none",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#756666",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                  }}
-                >
-                  GitHub ↗
-                </a>
-
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "12px",
-                    padding: "12px 18px",
-                    borderRadius: "10px",
-                    textDecoration: "none",
-                    fontSize: "13px",
-                    fontWeight: 600,
-                    color: "#756666",
-                    border: "1px solid #6366f1",
-                  }}
-                >
-                  Live Project ↗
-                </a>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))
+        )}
       </section>
 
-      {/* CTA */}
-
-      {/* <section
-        style={{
-          maxWidth: "1250px",
-          margin: "150px auto 100px",
-          padding: "80px 50px",
-          textAlign: "center",
-          borderRadius: "30px",
-          border: "1px solid rgba(99,102,241,0.25)",
-          background:
-            "radial-gradient(circle at 50% 0%, rgba(99,102,241,0.18), transparent 60%), rgba(15,18,30,0.7)",
-        }}
-      >
-        <span
-          style={{
-            color: "#818cf8",
-            fontSize: "11px",
-            fontWeight: 700,
-            letterSpacing: "2px",
-          }}
-        >
-          HAVE A PROJECT IN MIND?
-        </span>
-
-        <h2
-          style={{
-            maxWidth: "750px",
-            margin: "20px auto 35px",
-            fontSize: "clamp(35px,5vw,65px)",
-            lineHeight: 1.05,
-            letterSpacing: "-3px",
-          }}
-        >
-          Let&apos;s build something{" "}
-          <span style={{ color: "#818cf8" }}>meaningful.</span>
-        </h2> */}
-{/* 
-        <Link
-          href="/contact"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "15px",
-            padding: "15px 25px",
-            borderRadius: "12px",
-            background: "#6366f1",
-            color: "#fff",
-            textDecoration: "none",
-            fontSize: "14px",
-            fontWeight: 600,
-            boxShadow: "0 10px 35px rgba(99,102,241,0.25)",
-          }}
-        >
-          Let&apos;s Talk ↗
-        </Link> */}
-      {/* </section> */}
-
       {/* FOOTER */}
-
       <footer
         style={{
           maxWidth: "1250px",
-          margin: "auto",
+          margin: "100px auto 0",
           padding: "30px 0 40px",
           display: "flex",
           justifyContent: "space-between",
           color: "#475569",
           fontSize: "12px",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
+          borderTop: "1px solid rgba(0,0,0,0.07)",
         }}
       >
         <span>© 2026 Aarti Mehra</span>
