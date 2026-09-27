@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const contactDetails = [
+const contact = [
   {
     label: "EMAIL",
     value: "mehra11aarti@gmail.com",
@@ -32,8 +32,8 @@ export default function Contact() {
     <main
       style={{
         minHeight: "100vh",
-        background: "#FFFDF9",
-        color: "#F8F1E7",
+        background: "#F8F1E7",
+        color: "#14213D",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
@@ -47,7 +47,7 @@ export default function Contact() {
           width: "450px",
           height: "450px",
           borderRadius: "50%",
-          background: "#6366f1",
+          background: "#8B1E2D",
           filter: "blur(150px)",
           opacity: 0.12,
           top: "50px",
@@ -62,9 +62,9 @@ export default function Contact() {
           width: "350px",
           height: "350px",
           borderRadius: "50%",
-          background: "#8b5cf6",
+          background: "#1E3A5F",
           filter: "blur(140px)",
-          opacity: 0.1,
+          opacity: 0.12,
           bottom: "100px",
           left: "-200px",
           pointerEvents: "none",
@@ -81,7 +81,7 @@ export default function Contact() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          borderBottom: "1px solid rgba(20,33,61,0.12)",
           position: "relative",
           zIndex: 2,
         }}
@@ -89,9 +89,10 @@ export default function Contact() {
         <Link
           href="/"
           style={{
-            color: "#cbd5e1",
+            color: "#1E3A5F",
             textDecoration: "none",
             fontSize: "14px",
+            fontWeight: 600,
           }}
         >
           ← Back to Home
@@ -99,7 +100,7 @@ export default function Contact() {
 
         <span
           style={{
-            color: "#64748b",
+            color: "#526B84",
             fontSize: "12px",
             letterSpacing: "2px",
           }}
@@ -124,7 +125,7 @@ export default function Contact() {
             display: "flex",
             alignItems: "center",
             gap: "10px",
-            color: "#F8F1E7",
+            color: "#8B1E2D",
             fontSize: "13px",
             fontWeight: 600,
             letterSpacing: "1.5px",
@@ -137,8 +138,8 @@ export default function Contact() {
               width: "8px",
               height: "8px",
               borderRadius: "50%",
-              background: "#6366f1",
-              boxShadow: "0 0 15px #6366f1",
+              background: "#8B1E2D",
+              boxShadow: "0 0 15px rgba(139,30,45,0.5)",
             }}
           />
 
@@ -153,6 +154,7 @@ export default function Contact() {
             lineHeight: 0.95,
             letterSpacing: "-5px",
             fontWeight: 700,
+            color: "#14213D",
           }}
         >
           Let&apos;s build
@@ -161,7 +163,7 @@ export default function Contact() {
           <span
             style={{
               background:
-                "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa)",
+                "linear-gradient(100deg, #8B1E2D, #A83246, #1E3A5F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -174,7 +176,7 @@ export default function Contact() {
           style={{
             maxWidth: "650px",
             marginTop: "35px",
-            color: "#94a3b8",
+            color: "#526B84",
             fontSize: "18px",
             lineHeight: 1.8,
           }}
@@ -197,7 +199,7 @@ export default function Contact() {
           zIndex: 2,
         }}
       >
-        {contactDetails.map((contact, index) => (
+        {contact.map((contact) => (
           <a
             key={contact.label}
             href={contact.href}
@@ -217,11 +219,12 @@ export default function Contact() {
               justifyContent: "space-between",
               padding: "30px",
               borderRadius: "22px",
-              border: "1px solid rgba(255,255,255,0.08)",
-              background: "rgba(15,18,30,0.72)",
+              border: "1px solid rgba(30,58,95,0.14)",
+              background: "rgba(255,255,255,0.55)",
               backdropFilter: "blur(15px)",
               textDecoration: "none",
-              color: "#f8fafc",
+              color: "#14213D",
+              boxShadow: "0 10px 30px rgba(20,33,61,0.05)",
             }}
           >
             <div
@@ -241,11 +244,13 @@ export default function Contact() {
                   alignItems: "center",
                   justifyContent: "center",
                   borderRadius: "14px",
-                  background: "rgba(99,102,241,0.1)",
-                  border: "1px solid rgba(99,102,241,0.2)",
-                  color: "#a5b4fc",
-                  fontSize: contact.label === "LINKEDIN" ? "16px" : "20px",
-                  fontWeight: contact.label === "LINKEDIN" ? 700 : 400,
+                  background: "rgba(139,30,45,0.08)",
+                  border: "1px solid rgba(139,30,45,0.18)",
+                  color: "#8B1E2D",
+                  fontSize:
+                    contact.label === "LINKEDIN" ? "16px" : "20px",
+                  fontWeight:
+                    contact.label === "LINKEDIN" ? 700 : 400,
                 }}
               >
                 {contact.icon}
@@ -254,7 +259,7 @@ export default function Contact() {
               <div>
                 <div
                   style={{
-                    color: "#818cf8",
+                    color: "#8B1E2D",
                     fontSize: "10px",
                     fontWeight: 700,
                     letterSpacing: "1.5px",
@@ -266,7 +271,7 @@ export default function Contact() {
 
                 <div
                   style={{
-                    color: "#cbd5e1",
+                    color: "#1E3A5F",
                     fontSize: "14px",
                     wordBreak: "break-word",
                   }}
@@ -280,7 +285,7 @@ export default function Contact() {
 
             <span
               style={{
-                color: "#64748b",
+                color: "#1E3A5F",
                 fontSize: "20px",
               }}
             >
@@ -299,16 +304,17 @@ export default function Contact() {
           padding: "70px 50px",
           textAlign: "center",
           borderRadius: "30px",
-          border: "1px solid rgba(99,102,241,0.25)",
+          border: "1px solid rgba(139,30,45,0.18)",
           background:
-            "radial-gradient(circle at 50% 0%, rgba(99,102,241,0.18), transparent 60%), rgba(15,18,30,0.7)",
+            "radial-gradient(circle at 50% 0%, rgba(139,30,45,0.12), transparent 60%), rgba(255,255,255,0.45)",
           position: "relative",
           zIndex: 2,
+          boxShadow: "0 15px 45px rgba(20,33,61,0.06)",
         }}
       >
         <span
           style={{
-            color: "#818cf8",
+            color: "#8B1E2D",
             fontSize: "11px",
             fontWeight: 700,
             letterSpacing: "2px",
@@ -324,11 +330,12 @@ export default function Contact() {
             fontSize: "clamp(35px, 5vw, 62px)",
             lineHeight: 1.05,
             letterSpacing: "-3px",
+            color: "#14213D",
           }}
         >
           Have an idea?
           <br />
-          <span style={{ color: "#818cf8" }}>
+          <span style={{ color: "#8B1E2D" }}>
             Let&apos;s talk about it.
           </span>
         </h2>
@@ -337,7 +344,7 @@ export default function Contact() {
           style={{
             maxWidth: "550px",
             margin: "0 auto 30px",
-            color: "#94a3b8",
+            color: "#526B84",
             fontSize: "15px",
             lineHeight: 1.7,
           }}
@@ -354,12 +361,12 @@ export default function Contact() {
             gap: "12px",
             padding: "15px 25px",
             borderRadius: "12px",
-            background: "#6366f1",
-            color: "#fff",
+            background: "#8B1E2D",
+            color: "#FFFFFF",
             textDecoration: "none",
             fontSize: "14px",
             fontWeight: 600,
-            boxShadow: "0 10px 35px rgba(99,102,241,0.25)",
+            boxShadow: "0 10px 35px rgba(139,30,45,0.25)",
           }}
         >
           Send Me an Email ↗
@@ -375,9 +382,9 @@ export default function Contact() {
           padding: "30px 0 40px",
           display: "flex",
           justifyContent: "space-between",
-          color: "#475569",
+          color: "#526B84",
           fontSize: "12px",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
+          borderTop: "1px solid rgba(20,33,61,0.12)",
           position: "relative",
           zIndex: 2,
         }}
