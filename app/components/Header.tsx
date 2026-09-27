@@ -87,7 +87,7 @@ export default function Header() {
           Freelance Projects
            </Link>
           <Link
-            href="/blogs"
+            href="/documentation"
             style={{
               color: "#2D2424",
               textDecoration: "none",
@@ -95,7 +95,7 @@ export default function Header() {
             }}
           >
 
-            My Blogs
+            Documentation
           </Link>
 
           <Link

@@ -16,7 +16,7 @@ export default function Home() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "80px 60px",
+          padding: "20px 60px",
         }}
       >
         <div
@@ -46,7 +46,7 @@ export default function Home() {
               style={{
                 fontSize: "64px",
                 lineHeight: "1.1",
-                color:"#8B3A46",
+                color: "#8B3A46",
                 margin: "0 0 15px",
                 fontWeight: "800",
               }}
@@ -90,29 +90,31 @@ export default function Home() {
               <Link
                 href="/projects"
                 style={{
-                  // backgroundColor: "#6366f1",
-                  border: "1px solid #4A1420",
-                  color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "20px 28px",
+                  border: "2px solid #8B3A46",
+                  color: "#FFFDF9",
+                  backgroundColor: "#8B3A46",
+                  padding: "16px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
                   fontSize: "16px",
+                  transition: "all 0.3s ease",
                 }}
               >
-                View My Projects 
+                View My Projects
               </Link>
 
               <Link
                 href="/contact"
                 style={{
-                  border: "1px solid #4A1420",
-                  color: "linear-gradient(100deg, #6366f1, #8b5cf6, #a78bfa",
-                  padding: "20px 28px",
+                  border: "2px solid #8B3A46",
+                  color: "#8B3A46",
+                  padding: "16px 28px",
                   borderRadius: "8px",
                   textDecoration: "none",
                   fontWeight: "600",
                   fontSize: "16px",
+                  transition: "all 0.3s ease",
                 }}
               >
                 Contact Me
@@ -121,34 +123,35 @@ export default function Home() {
           </div>
 
           {/* Right side */}
-        <div
-  style={{
-    width: "300px",
-    height: "300px",
-    borderRadius: "50%",
-    overflow: "hidden",
-    flexShrink: 0,
-  }}
->
-  <Image
-    src="/profileimage.jpeg"
-    alt="Aarti Mehra"
-    width={300}
-    height={300}
-    style={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-    }}
-  />
-</div>
+          <div
+            style={{
+              width: "300px",
+              height: "300px",
+              borderRadius: "50%",
+              overflow: "hidden",
+              flexShrink: 0,
+              border: "4px solid #8B3A46",
+            }}
+          >
+            <Image
+              src="/profileimage.jpeg"
+              alt="Aarti Mehra"
+              width={300}
+              height={300}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
         </div>
       </section>
 
       {/* ABOUT */}
       <section
         style={{
-          padding: "100px 60px",
+          padding: "20px 10px",
           backgroundColor: "#ffffff",
           textAlign: "center",
         }}
@@ -156,7 +159,8 @@ export default function Home() {
         <h2
           style={{
             fontSize: "40px",
-            marginBottom: "20px",
+            marginBottom: "10px",
+            color: "#0f172a",
           }}
         >
           About Me
@@ -180,7 +184,7 @@ export default function Home() {
       {/* SKILLS */}
       <section
         style={{
-          padding: "100px 60px",
+          padding: "20px 10px",
           backgroundColor: "#f8fafc",
           textAlign: "center",
         }}
@@ -188,7 +192,8 @@ export default function Home() {
         <h2
           style={{
             fontSize: "40px",
-            marginBottom: "50px",
+            marginBottom: "10px",
+            color: "#0f172a",
           }}
         >
           My Skills
@@ -222,7 +227,7 @@ export default function Home() {
               key={skill}
               style={{
                 backgroundColor: "#ffffff",
-                padding: "12px 22px",
+                padding: "12px 12px",
                 borderRadius: "30px",
                 border: "1px solid #e2e8f0",
                 fontWeight: "500",
@@ -235,37 +240,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS & FREELANCE */}
       <section
         style={{
-          padding: "100px 60px",
+          padding: "20px 10px",
           backgroundColor: "#ffffff",
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
-          My Projects
+        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
+          My Work
         </h2>
 
         <p
           style={{
             color: "#64748b",
             fontSize: "18px",
+            marginBottom: "40px",
+            maxWidth: "600px",
+            margin: "0 auto 40px",
           }}
         >
-          Explore some of the projects I have built.
+          Explore my personal graduate projects alongside the professional web platforms I have built for freelance clients.
         </p>
+        
+        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+          <Link
+            href="/projects"
+            style={{
+              padding: "14px 30px",
+              backgroundColor: "#8B3A46",
+              color: "#FFFDF9",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "600",
+            }}
+          >
+            Personal Projects
+          </Link>
+          <Link
+            href="/freelance-projects"
+            style={{
+              padding: "14px 30px",
+              border: "2px solid #8B3A46",
+              color: "#8B3A46",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: "600",
+            }}
+          >
+            Freelance Work
+          </Link>
+        </div>
       </section>
 
       {/* EDUCATION */}
       <section
         style={{
-          padding: "100px 60px",
+          padding: "20px 10px",
           backgroundColor: "#f8fafc",
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
+        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
           My Education
         </h2>
 
@@ -273,36 +310,69 @@ export default function Home() {
           style={{
             fontSize: "18px",
             color: "#64748b",
+            fontWeight: "500",
+            marginBottom: "35px",
           }}
         >
           B.Tech in Computer Science and Engineering
         </p>
+        
+        <Link
+          href="/education"
+          style={{
+            padding: "14px 30px",
+            backgroundColor: "#8B3A46",
+            color: "#FFFDF9",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "600",
+            display: "inline-block",
+          }}
+        >
+          View Education Details
+        </Link>
       </section>
 
-      {/* BLOGS */}
+      {/* DOCUMENTATION */}
       <section
         style={{
-          padding: "100px 60px",
+          padding: "20px 10px",
           backgroundColor: "#ffffff",
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
-          My Blogs
+        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
+          Engineering Documentation
         </h2>
 
         <p
           style={{
             fontSize: "18px",
             color: "#64748b",
+            maxWidth: "700px",
+            margin: "0 auto 40px",
           }}
         >
-          I will be sharing my development journey and technical learnings
-          here.
+          A comprehensive deep-dive into my core engineering tasks, feature developments, and architectural contributions.
         </p>
+
+        <Link
+          href="/documentation"
+          style={{
+            padding: "14px 30px",
+            backgroundColor: "#8B3A46",
+            color: "#FFFDF9",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "600",
+            display: "inline-block",
+          }}
+        >
+          Read Documentation
+        </Link>
       </section>
 
-      {/* CONTACT
+      {/* CONTACT */}
       <section
         style={{
           padding: "100px 60px",
@@ -334,8 +404,8 @@ export default function Home() {
           href="/contact"
           style={{
             display: "inline-block",
-            backgroundColor: "#F8F1E7",
-            color: "#6B1F2B",
+            backgroundColor: "#6B1F2B",
+            color: "#FFFDF9",
             padding: "14px 30px",
             borderRadius: "8px",
             textDecoration: "none",
@@ -344,7 +414,7 @@ export default function Home() {
         >
           Contact Me
         </Link>
-      </section> */}
+      </section>
     </main>
   );
 }

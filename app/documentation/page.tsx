@@ -1,64 +1,64 @@
 import Link from "next/link";
 
-const blogs = [
+const workflowSteps = [
   {
-    slug: "understanding-react-components",
+    slug: "unified-checkout-engine",
     number: "01",
-    category: "React",
-    title: "Understanding React Components: The Foundation of Modern UI",
+    category: "Storefront (Next.js)",
+    title: "Modal-Based Checkout & Cart Engine",
     description:
-      "Learn how React components work, why component-based architecture matters, and how breaking a UI into reusable pieces makes applications easier to maintain.",
-    date: "August 20, 2026",
-    readTime: "5 min read",
-    skills: ["React", "JavaScript", "Frontend"],
+      "Re-architected the customer checkout experience by replacing legacy funnels with a unified 4-step modal system. Built complete unauthenticated guest flows with mid-flow auth gates, COD-to-Prepaid conversion logic, and automated coupon validation (BuyX-GetY engine).",
+    date: "AIPM Storefront",
+    readTime: "Frontend & Payments",
+    skills: ["Next.js", "State Management", "Payment Gateways", "Cart Logic"],
   },
   {
-    slug: "how-nextjs-app-router-works",
+    slug: "admin-dashboard-analytics",
     number: "02",
-    category: "Next.js",
-    title: "How Next.js App Router Actually Works",
+    category: "Internal Tooling (React)",
+    title: "Admin App: Data Dashboards & Analytics",
     description:
-      "A beginner-friendly explanation of the Next.js App Router, file-based routing, layouts, pages and dynamic routes.",
-    date: "August 18, 2026",
-    readTime: "7 min read",
-    skills: ["Next.js", "React", "Routing"],
+      "Designed and developed the v2/v3 Admin Dashboard single-handedly. Engineered a dynamic metric card system, aggregations charts, and complex data-table filters spanning Operations, Finance, and Analytics. Migrated frontend calculations to secure backend-computed APIs.",
+    date: "AIPM Admin",
+    readTime: "Data Visualization",
+    skills: ["React", "RTK Query", "Analytics", "API Migration"],
   },
   {
-    slug: "understanding-rest-apis",
+    slug: "gokwik-abandoned-cart",
     number: "03",
-    category: "Backend",
-    title: "REST APIs Explained: How Frontend and Backend Communicate",
+    category: "Conversion Optimization",
+    title: "Abandoned Cart & Lead Capture System",
     description:
-      "Understand what REST APIs are, how HTTP methods work, and how a frontend application communicates with a backend server.",
-    date: "August 15, 2026",
-    readTime: "6 min read",
-    skills: ["Node.js", "Express", "API"],
+      "Integrated the GoKwik SDK to capture abandoned cart leads across guest handoff points. Built automated payload extraction, deduplication logic for returning shoppers, and armed the capture process to silently attach logged-in profiles to lead records.",
+    date: "AIPM Storefront",
+    readTime: "SDK Integration",
+    skills: ["GoKwik SDK", "Lead Tracking", "Event Listeners"],
   },
   {
-    slug: "sql-joins-explained",
+    slug: "content-blocks-localization",
     number: "04",
-    category: "Database",
-    title: "SQL Joins Explained with Practical Examples",
+    category: "CMS & Localization",
+    title: "Dynamic Content Blocks & Multilingual SEO",
     description:
-      "Understand INNER JOIN, LEFT JOIN, RIGHT JOIN and how relational databases combine information from multiple tables.",
-    date: "August 12, 2026",
-    readTime: "8 min read",
-    skills: ["SQL", "MySQL", "Database"],
+      "Built a flexible content management system featuring rich-text editors and dynamic page blocks. Delivered comprehensive localization (English/Hindi) across the platform, handling text-clipping constraints, and optimized pages with SSR content blocks and structured schema for SEO.",
+    date: "AIPM Full Stack",
+    readTime: "SEO & CMS",
+    skills: ["SSR", "Localization", "Rich-Text Edit", "Schema Markup"],
   },
   {
-    slug: "git-github-beginners-guide",
+    slug: "order-management-whatsapp",
     number: "05",
-    category: "Developer Tools",
-    title: "Git & GitHub: A Practical Guide for Beginners",
+    category: "Operations App",
+    title: "Order Trails & WhatsApp Carousel Builder",
     description:
-      "A simple explanation of repositories, commits, branches, pushing code and why Git is essential for modern software development.",
-    date: "August 10, 2026",
-    readTime: "6 min read",
-    skills: ["Git", "GitHub", "Development"],
+      "Engineered the complete order management pipeline—from manual order creation and partial payments to detailed order trail tracking. Additionally built a multi-screen WhatsApp notification template authoring tool with dynamic media uploads and fill-in-the-blank placeholders.",
+    date: "AIPM Admin",
+    readTime: "Operations Tools",
+    skills: ["Routing", "Template Builders", "Order Workflows"],
   },
 ];
 
-export default function Blogs() {
+export default function Documentation() {
   return (
     <main
       style={{
@@ -71,7 +71,6 @@ export default function Blogs() {
       }}
     >
       {/* Background Glow */}
-
       <div
         style={{
           position: "absolute",
@@ -103,7 +102,6 @@ export default function Blogs() {
       />
 
       {/* NAVIGATION */}
-
       <nav
         style={{
           maxWidth: "1250px",
@@ -112,7 +110,7 @@ export default function Blogs() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
           position: "relative",
           zIndex: 2,
         }}
@@ -135,17 +133,16 @@ export default function Blogs() {
             letterSpacing: "2px",
           }}
         >
-          BLOGS / 05
+          DOCUMENTATION / {workflowSteps.length < 10 ? `0${workflowSteps.length}` : workflowSteps.length}
         </span>
       </nav>
 
       {/* HERO */}
-
       <section
         style={{
           maxWidth: "1250px",
           margin: "auto",
-          // padding: "110px 0 80px",
+          padding: "80px 0 60px",
           position: "relative",
           zIndex: 2,
         }}
@@ -168,56 +165,40 @@ export default function Blogs() {
               width: "8px",
               height: "8px",
               borderRadius: "50%",
-              background: "#6366f1",
-              boxShadow: "0 0 15px #6366f1",
+              background: "#6B1F2B",
+              boxShadow: "0 0 15px #6B1F2B",
             }}
           />
-
-          Developer Journal
+          Engineering Work & Experience
         </div>
 
         <h2
           style={{
             margin: 0,
             maxWidth: "900px",
-            fontSize: "clamp(55px, 8vw, 10px)",
+            fontSize: "clamp(45px, 8vw, 85px)",
             lineHeight: 0.95,
-            letterSpacing: "-5px",
-            fontWeight: 70,
+            letterSpacing: "-3px",
+            fontWeight: 800,
           }}
         >
-          Thoughts,code & 
-          <br />
-          Knowledge
-          <span
-            style={{
-              // background:
-                // "linear-gradient(100deg, #4A1420, #6B1F2B, #8B3A46)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Code & Knowledge.
-          </span>
+          Building Systems at <br /> AIPM.
         </h2>
 
         <p
           style={{
             maxWidth: "680px",
-            marginTop: "19px",
+            marginTop: "25px",
             color: "#2D2424",
-            fontSize: "12px",
+            fontSize: "16px",
             lineHeight: 1.8,
           }}
         >
-          I write about things I learn while building software — from
-          frontend development and React to APIs, databases, Git and
-          everything in between.
+          A documented overview of my core engineering tasks, feature developments, and architectural contributions across the AIPM Storefront (Next.js) and Internal Admin App (React).
         </p>
       </section>
 
-      {/* BLOG LIST */}
-
+      {/* WORKFLOW LIST */}
       <section
         style={{
           maxWidth: "1250px",
@@ -229,9 +210,9 @@ export default function Blogs() {
           zIndex: 2,
         }}
       >
-        {blogs.map((blog) => (
+        {workflowSteps.map((step) => (
           <article
-            key={blog.slug}
+            key={step.slug}
             style={{
               display: "grid",
               gridTemplateColumns: "80px 1fr auto",
@@ -239,13 +220,12 @@ export default function Blogs() {
               alignItems: "center",
               padding: "32px",
               borderRadius: "22px",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid rgba(0,0,0,0.08)",
               background: "#F8F1E7",
               backdropFilter: "blur(15px)",
             }}
           >
             {/* NUMBER */}
-
             <div
               style={{
                 color: "#2D2424",
@@ -254,11 +234,10 @@ export default function Blogs() {
                 letterSpacing: "1px",
               }}
             >
-              {blog.number}
+              {step.number}
             </div>
 
             {/* CONTENT */}
-
             <div>
               <div
                 style={{
@@ -277,16 +256,10 @@ export default function Blogs() {
                     textTransform: "uppercase",
                   }}
                 >
-                  {blog.category}
+                  {step.category}
                 </span>
 
-                <span
-                  style={{
-                    color: "#2D2424",
-                  }}
-                >
-                  •
-                </span>
+                <span style={{ color: "#2D2424" }}>•</span>
 
                 <span
                   style={{
@@ -294,7 +267,7 @@ export default function Blogs() {
                     fontSize: "12px",
                   }}
                 >
-                  {blog.readTime}
+                  {step.readTime}
                 </span>
               </div>
 
@@ -306,7 +279,7 @@ export default function Blogs() {
                   lineHeight: 1.2,
                 }}
               >
-                {blog.title}
+                {step.title}
               </h2>
 
               <p
@@ -318,11 +291,10 @@ export default function Blogs() {
                   lineHeight: 1.7,
                 }}
               >
-                {blog.description}
+                {step.description}
               </p>
 
               {/* SKILLS */}
-
               <div
                 style={{
                   display: "flex",
@@ -331,16 +303,17 @@ export default function Blogs() {
                   marginTop: "18px",
                 }}
               >
-                {blog.skills.map((skill) => (
+                {step.skills.map((skill) => (
                   <span
                     key={skill}
                     style={{
                       padding: "6px 10px",
                       borderRadius: "7px",
-                      background: "rgba(99,102,241,0.08)",
-                      border: "1px solid rgba(99,102,241,0.15)",
+                      background: "rgba(139, 58, 70, 0.08)",
+                      border: "1px solid rgba(139, 58, 70, 0.15)",
                       color: "#2D2424",
                       fontSize: "10px",
+                      fontWeight: 600,
                     }}
                   >
                     {skill}
@@ -355,14 +328,13 @@ export default function Blogs() {
                   fontSize: "11px",
                 }}
               >
-                {blog.date}
+                {step.date}
               </div>
             </div>
 
-            {/* READ BUTTON */}
-
-            <Link
-              href={`/blogs/${blog.slug}`}
+            {/* VIEW DETAILS BUTTON */}
+            {/* <Link
+              href={`/documentation/${step.slug}`}
               style={{
                 width: "46px",
                 height: "46px",
@@ -372,91 +344,28 @@ export default function Blogs() {
                 justifyContent: "center",
                 textDecoration: "none",
                 color: "#2D2424",
-                border: "1px solid rgba(255,255,255,0.1)",
+                border: "1px solid rgba(0,0,0,0.1)",
                 fontSize: "18px",
+                transition: "all 0.2s ease",
               }}
             >
               ↗
-            </Link>
+            </Link> */}
           </article>
         ))}
       </section>
 
-      {/* CTA
-
-      <section
-        style={{
-          maxWidth: "1250px",
-          margin: "150px auto 100px",
-          padding: "80px 50px",
-          textAlign: "center",
-          borderRadius: "30px",
-          border: "1px solid rgba(99,102,241,0.25)",
-          background:
-            "radial-gradient(circle at 50% 0%, rgba(99,102,241,0.18), transparent 60%), rgba(15,18,30,0.7)",
-          position: "relative",
-          zIndex: 2,
-        }}
-      >
-        <span
-          style={{
-            color: "#818cf8",
-            fontSize: "11px",
-            fontWeight: 700,
-            letterSpacing: "2px",
-          }}
-        >
-          KEEP EXPLORING
-        </span>
-
-        <h2
-          style={{
-            maxWidth: "750px",
-            margin: "20px auto 35px",
-            fontSize: "clamp(35px,5vw,65px)",
-            lineHeight: 1.05,
-            letterSpacing: "-3px",
-          }}
-        >
-          Learn.
-          <br />
-          Build.
-          <br />
-          <span style={{ color: "#818cf8" }}>Repeat.</span>
-        </h2>
-
-        <Link
-          href="/projects"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "15px",
-            padding: "15px 25px",
-            borderRadius: "12px",
-            background: "#6366f1",
-            color: "#fff",
-            textDecoration: "none",
-            fontSize: "14px",
-            fontWeight: 600,
-            boxShadow: "0 10px 35px rgba(99,102,241,0.25)",
-          }}
-        >
-          Explore My Projects ↗
-        </Link>
-      </section> */}
-
       {/* FOOTER */}
-
       <footer
         style={{
           maxWidth: "1250px",
-          margin: "auto",
+          margin: "80px auto 0",
           padding: "30px 0 40px",
           display: "flex",
           justifyContent: "space-between",
           color: "#2D2424",
           fontSize: "12px",
-          borderTop: "1px solid rgba(255,255,255,0.07)",
+          borderTop: "1px solid rgba(0,0,0,0.07)",
         }}
       >
         <span>© 2026 Aarti Mehra</span>
