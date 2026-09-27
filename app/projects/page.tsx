@@ -1,8 +1,21 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
 
-const projectsData = {
+type Project = {
+  number: string;
+  title: string;
+  category: string;
+  description: string;
+  skills: string[];
+  github: string;
+  live: string;
+};
+
+type ProjectTab = "graduate" | "ongoing";
+
+const projectsData: Record<ProjectTab, Project[]> = {
   graduate: [
     {
       number: "01",
@@ -11,63 +24,25 @@ const projectsData = {
       description:
         "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
       skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
-      github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
+      github:
+        "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
       live: "https://cricket-gules.vercel.app/",
     },
+
     {
       number: "02",
       title: "Task Management System",
       category: "Full Stack Development",
       description:
-        "*Task Management System A full-stack task management application built with the node.js,react.js and using MySQL. This application allows users to register, log in, and manage their daily tasks through a clean, responsive dashboard",
+        "A full-stack task management application built with Node.js, React.js and MySQL. This application allows users to register, log in, and manage their daily tasks through a clean, responsive dashboard.",
       skills: ["Node.js", "Express", "React", "REST API"],
       github: "https://github.com/Aartimehr/TaskManagementSystem",
-      // live: "https://cube-telemetry.vercel.app",
+      live: "#",
     },
 
-    // {
-    //   number: "03",
-    //   title: "Aarnamgati",
-    //   category: "Vehicle Tracking",
-    //   description:
-    //     "A modern vehicle tracking platform focused on providing users with a simple interface to monitor vehicle information and movement.",
-    //   skills: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    //   github: "https://github.com/yourusername/aarnamgati",
-    //   live: "https://aarnamgati.vercel.app",
-    // },
-    // {
-    //   number: "04",
-    //   title: "Smart Calculator",
-    //   category: "Productivity Tool",
-    //   description:
-    //     "A clean calculator application featuring calculation history, responsive interactions and a polished user experience.",
-    //   skills: ["React", "JavaScript", "CSS", "Local Storage"],
-    //   github: "https://github.com/yourusername/smart-calculator",
-    //   live: "https://smart-calculator.vercel.app",
-    // },
+    // Add more graduate projects here when needed.
   ],
-  // afterGraduation: [
-  //   {
-  //     number: "01",
-  //     title: "Techhbyus",
-  //     category: "Sports Platform",
-  //     description:
-  //       "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
-  //     skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
-  //     github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
-  //     live: "https://cricket-gules.vercel.app/",
-  //   },
-  //   {
-  //     number: "01",
-  //     title: "CricFolio",
-  //     category: "Sports Platform",
-  //     description:
-  //       "A dynamic cricket platform designed to provide users with an engaging experience for exploring cricket information, players, teams and match-related data.",
-  //     skills: ["React", "Vite", "Tailwind CSS", "Node.js", "MongoDB"],
-  //     github: "https://github.com/Aartimehr/CricFolio--Final-Year-Project-",
-  //     live: "https://cricket-gules.vercel.app/",
-  //   },
-  // ],
+
   ongoing: [
     {
       number: "01",
@@ -79,6 +54,7 @@ const projectsData = {
       github: "https://github.com/yourusername/techbyus",
       live: "https://techhbyus.com",
     },
+
     {
       number: "02",
       title: "Invoice Tracker Micro-SaaS",
@@ -86,33 +62,74 @@ const projectsData = {
       description:
         "A B2B invoice tracking Micro-SaaS platform designed to streamline billing operations, monitor revenue, and simplify business financial workflows.",
       skills: ["React", "Node.js", "MySQL"],
-      github: "#", // Update with actual link when available
-      live: "#", // Update with actual link when available
+      github: "#",
+      live: "#",
     },
   ],
 };
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState("graduate");
+  const [activeTab, setActiveTab] =
+    useState<ProjectTab>("graduate");
 
-  const tabs = [
-    { id: "graduate", label: "Graduate Projects" },
-    // { id: "afterGraduation", label: "After Graduation Projects" },
-    { id: "ongoing", label: "Ongoing Projects" },
+  const tabs: { id: ProjectTab; label: string }[] = [
+    {
+      id: "graduate",
+      label: "Graduate Projects",
+    },
+    {
+      id: "ongoing",
+      label: "Ongoing Projects",
+    },
   ];
 
   return (
     <main
       style={{
         minHeight: "100vh",
-        background: "#FFFDF9",
-        color: "#2D2424",
+        background: "#F8F1E7",
+        color: "#14213D",
         padding: "0 7%",
         position: "relative",
         overflow: "hidden",
       }}
     >
+      {/* BACKGROUND GLOW - RED */}
+
+      <div
+        style={{
+          position: "absolute",
+          width: "450px",
+          height: "450px",
+          borderRadius: "50%",
+          background: "#8B1E2D",
+          filter: "blur(150px)",
+          opacity: 0.08,
+          top: "50px",
+          right: "-200px",
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* BACKGROUND GLOW - BLUE */}
+
+      <div
+        style={{
+          position: "absolute",
+          width: "400px",
+          height: "400px",
+          borderRadius: "50%",
+          background: "#1E3A5F",
+          filter: "blur(150px)",
+          opacity: 0.08,
+          bottom: "200px",
+          left: "-200px",
+          pointerEvents: "none",
+        }}
+      />
+
       {/* NAVBAR */}
+
       <nav
         style={{
           maxWidth: "1250px",
@@ -121,15 +138,18 @@ export default function Projects() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderBottom: "1px solid rgba(0,0,0,0.08)",
+          borderBottom: "1px solid rgba(20,33,61,0.12)",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         <Link
           href="/"
           style={{
-            color: "#2D2424",
+            color: "#1E3A5F",
             textDecoration: "none",
             fontSize: "14px",
+            fontWeight: 600,
           }}
         >
           ← Back to Home
@@ -137,7 +157,7 @@ export default function Projects() {
 
         <span
           style={{
-            color: "#2D2424",
+            color: "#526B84",
             fontSize: "12px",
             letterSpacing: "2px",
             textTransform: "uppercase",
@@ -148,10 +168,13 @@ export default function Projects() {
       </nav>
 
       {/* HEADER */}
+
       <section
         style={{
           maxWidth: "1250px",
           margin: "60px auto 40px",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         <h1
@@ -162,6 +185,7 @@ export default function Projects() {
             lineHeight: 0.95,
             letterSpacing: "-2px",
             fontWeight: 800,
+            color: "#14213D",
           }}
         >
           Things I&apos;ve Built.
@@ -171,18 +195,19 @@ export default function Projects() {
           style={{
             maxWidth: "650px",
             marginTop: "20px",
-            color: "#2D2424",
+            color: "#526B84",
             fontSize: "18px",
             lineHeight: 1.8,
           }}
         >
-          A collection of projects where I combine thoughtful design, frontend
-          engineering, and backend development to create useful digital
-          experiences.
+          A collection of projects where I combine thoughtful design,
+          frontend engineering, and backend development to create useful
+          digital experiences.
         </p>
       </section>
 
       {/* TABS NAVIGATION */}
+
       <section
         style={{
           maxWidth: "1250px",
@@ -190,6 +215,8 @@ export default function Projects() {
           display: "flex",
           gap: "15px",
           flexWrap: "wrap",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         {tabs.map((tab) => (
@@ -199,9 +226,14 @@ export default function Projects() {
             style={{
               padding: "12px 24px",
               borderRadius: "30px",
-              border: activeTab === tab.id ? "none" : "1px solid #6B1F2B",
-              background: activeTab === tab.id ? "#6B1F2B" : "transparent",
-              color: activeTab === tab.id ? "#FFFDF9" : "#6B1F2B",
+              border:
+                activeTab === tab.id
+                  ? "1px solid #8B1E2D"
+                  : "1px solid #8B1E2D",
+              background:
+                activeTab === tab.id ? "#8B1E2D" : "transparent",
+              color:
+                activeTab === tab.id ? "#FFFFFF" : "#8B1E2D",
               fontSize: "14px",
               fontWeight: 600,
               cursor: "pointer",
@@ -214,6 +246,7 @@ export default function Projects() {
       </section>
 
       {/* PROJECTS LIST */}
+
       <section
         style={{
           maxWidth: "1250px",
@@ -224,6 +257,8 @@ export default function Projects() {
           borderRadius: "30px",
           flexDirection: "column",
           gap: "22px",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         {projectsData[activeTab].length === 0 ? (
@@ -244,29 +279,31 @@ export default function Projects() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "90px 1fr",
-                border: "1px solid rgba(255,255,255,0.09)",
+                border: "1px solid rgba(20,33,61,0.12)",
                 borderRadius: "24px",
-                background: "rgba(15,18,30,0.72)",
-                backdropFilter: "blur(15px)",
+                background: "#F8F1E7",
                 overflow: "hidden",
+                boxShadow: "0 10px 30px rgba(20,33,61,0.06)",
               }}
             >
               {/* PROJECT NUMBER */}
+
               <div
                 style={{
                   padding: "35px 25px",
-                  background: "#F8F1E7",
-                  color: "#6366f1",
+                  background: "#EDE2D3",
+                  color: "#8B1E2D",
                   fontSize: "13px",
                   fontWeight: 700,
                   letterSpacing: "1px",
-                  borderRight: "1px solid rgba(0,0,0,0.07)",
+                  borderRight: "1px solid rgba(20,33,61,0.10)",
                 }}
               >
                 {project.number}
               </div>
 
               {/* PROJECT CONTENT */}
+
               <div
                 style={{
                   padding: "35px 40px",
@@ -278,12 +315,13 @@ export default function Projects() {
                     display: "flex",
                     alignItems: "flex-start",
                     justifyContent: "space-between",
+                    gap: "20px",
                   }}
                 >
                   <div>
                     <span
                       style={{
-                        color: "#2D2424",
+                        color: "#8B1E2D",
                         fontSize: "12px",
                         fontWeight: 600,
                         letterSpacing: "1.5px",
@@ -298,22 +336,26 @@ export default function Projects() {
                         margin: "10px 0 0",
                         fontSize: "38px",
                         letterSpacing: "-1.5px",
+                        color: "#14213D",
                       }}
                     >
                       {project.title}
                     </h2>
                   </div>
 
+                  {/* ARROW */}
+
                   <span
                     style={{
                       width: "48px",
                       height: "48px",
+                      minWidth: "48px",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      border: "1px solid rgba(0,0,0,0.1)",
+                      border: "1px solid rgba(30,58,95,0.15)",
                       borderRadius: "50%",
-                      color: "#a5b4fc",
+                      color: "#1E3A5F",
                       fontSize: "20px",
                     }}
                   >
@@ -322,10 +364,11 @@ export default function Projects() {
                 </div>
 
                 {/* DESCRIPTION */}
+
                 <p
                   style={{
                     maxWidth: "760px",
-                    color: "#2D2424",
+                    color: "#526B84",
                     lineHeight: 1.75,
                     fontSize: "15px",
                     margin: "22px 0",
@@ -335,6 +378,7 @@ export default function Projects() {
                 </p>
 
                 {/* SKILLS */}
+
                 <div
                   style={{
                     display: "flex",
@@ -350,7 +394,8 @@ export default function Projects() {
                         padding: "8px 13px",
                         borderRadius: "8px",
                         background: "#8B3A46",
-                        border: "1px solid rgba(255,255,255,0.18)",
+                        border:
+                          "1px solid rgba(139,30,45,0.15)",
                         color: "#F8F1E7",
                         fontSize: "12px",
                         fontWeight: 500,
@@ -362,12 +407,16 @@ export default function Projects() {
                 </div>
 
                 {/* BUTTONS */}
+
                 <div
                   style={{
                     display: "flex",
                     gap: "12px",
+                    flexWrap: "wrap",
                   }}
                 >
+                  {/* GITHUB */}
+
                   <a
                     href={project.github}
                     target="_blank"
@@ -381,12 +430,16 @@ export default function Projects() {
                       textDecoration: "none",
                       fontSize: "13px",
                       fontWeight: 600,
-                      color: "#756666",
-                      border: "1px solid rgba(0,0,0,0.12)",
+                      color: "#1E3A5F",
+                      border:
+                        "1px solid rgba(30,58,95,0.20)",
+                      background: "transparent",
                     }}
                   >
                     GitHub ↗
                   </a>
+
+                  {/* LIVE PROJECT */}
 
                   <a
                     href={project.live}
@@ -401,8 +454,9 @@ export default function Projects() {
                       textDecoration: "none",
                       fontSize: "13px",
                       fontWeight: 600,
-                      color: "#756666",
-                      border: "1px solid #6366f1",
+                      color: "#8B1E2D",
+                      border: "1px solid #8B1E2D",
+                      background: "transparent",
                     }}
                   >
                     Live Project ↗
@@ -415,6 +469,7 @@ export default function Projects() {
       </section>
 
       {/* FOOTER */}
+
       <footer
         style={{
           maxWidth: "1250px",
@@ -422,12 +477,15 @@ export default function Projects() {
           padding: "30px 0 40px",
           display: "flex",
           justifyContent: "space-between",
-          color: "#475569",
+          color: "#526B84",
           fontSize: "12px",
-          borderTop: "1px solid rgba(0,0,0,0.07)",
+          borderTop: "1px solid rgba(20,33,61,0.12)",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         <span>© 2026 Aarti Mehra</span>
+
         <span>Designed & Built with Next.js</span>
       </footer>
     </main>

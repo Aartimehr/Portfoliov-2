@@ -39,7 +39,7 @@ export default function Home() {
                 marginBottom: "15px",
               }}
             >
-              Hello, I'm
+              Hello, My name is 
             </p>
 
             <h1
@@ -175,7 +175,7 @@ export default function Home() {
             color: "#64748b",
           }}
         >
-          I'm a Full Stack Developer with a strong interest in frontend
+           A Full Stack Developer with a strong interest in frontend
           development. I enjoy creating clean interfaces, solving
           development problems and continuously learning new technologies.
         </p>
@@ -222,12 +222,12 @@ export default function Home() {
             "Git",
             "GitHub",
             "Tailwind CSS",
-          ].map((skill) => (
+          ].map((skill: string) => (
             <span
               key={skill}
               style={{
                 backgroundColor: "#ffffff",
-                padding: "12px 12px",
+                padding: "12px",
                 borderRadius: "30px",
                 border: "1px solid #e2e8f0",
                 fontWeight: "500",
@@ -248,7 +248,13 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
+        <h2
+          style={{
+            fontSize: "40px",
+            marginBottom: "20px",
+            color: "#0f172a",
+          }}
+        >
           My Work
         </h2>
 
@@ -256,15 +262,21 @@ export default function Home() {
           style={{
             color: "#64748b",
             fontSize: "18px",
-            marginBottom: "40px",
             maxWidth: "600px",
             margin: "0 auto 40px",
           }}
         >
-          Explore my personal graduate projects alongside the professional web platforms I have built for freelance clients.
+          Explore my personal graduate projects alongside the professional web
+          platforms I have built for freelance clients.
         </p>
-        
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "20px",
+          }}
+        >
           <Link
             href="/projects"
             style={{
@@ -278,6 +290,7 @@ export default function Home() {
           >
             Personal Projects
           </Link>
+
           <Link
             href="/freelance-projects"
             style={{
@@ -302,7 +315,13 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
+        <h2
+          style={{
+            fontSize: "40px",
+            marginBottom: "20px",
+            color: "#0f172a",
+          }}
+        >
           My Education
         </h2>
 
@@ -316,7 +335,7 @@ export default function Home() {
         >
           B.Tech in Computer Science and Engineering
         </p>
-        
+
         <Link
           href="/education"
           style={{
@@ -341,7 +360,13 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "40px", marginBottom: "20px", color: "#0f172a" }}>
+        <h2
+          style={{
+            fontSize: "40px",
+            marginBottom: "20px",
+            color: "#0f172a",
+          }}
+        >
           Engineering Documentation
         </h2>
 
@@ -353,7 +378,8 @@ export default function Home() {
             margin: "0 auto 40px",
           }}
         >
-          A comprehensive deep-dive into my core engineering tasks, feature developments, and architectural contributions.
+          A comprehensive deep-dive into my core engineering tasks, feature
+          developments, and architectural contributions.
         </p>
 
         <Link
@@ -387,7 +413,7 @@ export default function Home() {
             marginBottom: "20px",
           }}
         >
-          Let's Work Together
+          Wanna Work Together
         </h2>
 
         <p
@@ -397,7 +423,7 @@ export default function Home() {
             marginBottom: "30px",
           }}
         >
-          Have a project or opportunity in mind? I'd love to hear from you.
+          Have a project or opportunity in mind? I would love to hear from you.
         </p>
 
         <Link

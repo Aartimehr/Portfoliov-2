@@ -33,7 +33,7 @@ export default function Header() {
             fontWeight: "700",
           }}
         >
-          Aarti's Portfolio
+          My Portfolio
         </Link>
 
         {/* Navigation */}
